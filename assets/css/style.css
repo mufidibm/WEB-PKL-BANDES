@@ -226,6 +226,7 @@ body {
   .beranda {
     justify-content: center;
     text-align: center;
+    padding: 15px 5px;
   }
 
   .kiri {
