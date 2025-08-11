@@ -227,7 +227,7 @@ body {
       }
 
       /* Indicators */
-      .carousel-indicators {
+   .carousel-indicators {
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -257,6 +257,7 @@ body {
         background: rgba(255, 255, 255, 0.8);
         transform: scale(1.1);
       }
+
 
       /* Progress Bar */
       .carousel-progress {
