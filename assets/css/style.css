@@ -179,7 +179,7 @@ body {
         transform: scale(1.02);
       }
 
-      /* Navigation Buttons */
+  
       .carousel-nav {
         position: absolute;
         top: 50%;
@@ -386,14 +386,16 @@ body {
 
 @media (max-width: 768px) {
   .beranda {
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
     padding: 15px 5px;
   }
 
   .kiri {
     max-width: 100%;
     margin-bottom: 40px;
+    text-align: center;
+    margin-top: 50px;
   }
 
   .kiri h1 {
@@ -401,12 +403,18 @@ body {
   }
 
   .kanan {
- max-width: 50%;
- display: none;
+    order: -1;
+    width: 90%;
+    margin-left: 0;
+    padding-top: 100px;
+    left: 0;
+
   }
 
+
    .custom-carousel {
-          height: 280px;
+          height: 230px;
+          max-width: 100%;
         }
 
         .carousel-nav {
