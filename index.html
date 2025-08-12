@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandes Rekayasa Digital</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+
     <link
       rel="shortcut icon"
       href="assets/images/icon/favicon/favicon.ico"
       type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous" />
     <script src="assets/js/script.js"></script>
   </head>
   <body>
@@ -51,6 +48,59 @@
           </a>
         </div>
         <div class="kanan">
+
+          <div class="custom-carousel" id="carousel">
+            <div class="carousel-container">
+              <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide active">
+                  <img src="assets/images/gambar/tentang.jpg" alt="Foto grup 1" loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/images/gambar/tentang_2.png" alt="Foto Grup2" loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                  <img src="assets/images/gambar/Pinjaman.png" alt="Pinjaman" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-nav carousel-prev" id="prevBtn"></button>
+            <button class="carousel-nav carousel-next" id="nextBtn"></button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators" id="indicators">
+              <div class="carousel-indicator active" data-slide="0"></div>
+              <div class="carousel-indicator" data-slide="1"></div>
+              <div class="carousel-indicator" data-slide="2"></div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="carousel-progress">
+              <div class="carousel-progress-bar" id="progressBar"></div>
+            </div>
+
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" >
+    <div class="carousel-item active" >
+      <img src="assets/images/gambar/tentang_2.png" class="d-block w-100" alt="..." style="object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/gambar/tentang.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/gambar/Pinjaman.png" class="d-block w-100" alt="..." style="object-fit: cover;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+          </div>
         </div>
       </div>
     </section>
@@ -161,7 +211,7 @@
           <div class="card">
             <img src="assets/images/gambar/toliet water.png" alt="" />
             <div class="isi">
-              <h3>Pelayanan Pengisian Air Toilet Di Penerbangan Batik Air</h3>
+              <h3 style="text-align:left;">Pelayanan Pengisian Air Toilet Di Penerbangan Batik Air</h3>
               <p>
                 Kami dengan bangga menyediakan layanan air toilet pesawat,
                 menjamin standar kebersihan dan kenyamanan bagi penumpang.
@@ -174,14 +224,14 @@
         </div>
       </div>
     </section>
-    <section id="struktur">
+    <!-- <section id="struktur">
       <h2>Struktur Organisasi</h2>
       <center>
         <img
           src="assets/images/gambar/struktur_organisasi.png"
           alt="Struktur Organisasi" />
       </center>
-    </section>
+    </section> -->
     <section id="galeri">
       <h2>Galeri</h2>
       <div class="galeri-container">
@@ -278,9 +328,7 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+-->
   </body>
 </html>
