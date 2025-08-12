@@ -10,6 +10,42 @@ body {
   overflow-x: hidden;
 }
 
+.hubungi-wa {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background-color: #29b43d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  z-index: 9998;
+}
+
+.hubungi-wa:hover {
+  background-color: #1e922f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  border: 2px solid white;
+}
+
+.hubungi-wa-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+
+.hubungi-wa-logo img {
+  width: 50%;
+}
+
 @keyframes darikanan {
   from {
     transform: translateX(100%);
@@ -811,7 +847,7 @@ body {
   .galeri-container img {
     scale: 1.3;
     position: relative;
-    top: 140px;
+    top: 190px;
   }
   .galeri-container img:hover {
     scale: 1.35;
@@ -925,7 +961,7 @@ body {
 }
 
 .footer-section h3 {
-  color: #ecf0f1;
+  color: white;
   margin-bottom: 15px;
   font-size: 1.2em;
   border-bottom: 2px solid #3498db;
@@ -935,7 +971,7 @@ body {
 
 .footer-section p,
 .footer-section li {
-  color: #bdc3c7;
+  color: white;
   margin-bottom: 8px;
   font-size: 0.9em;
 }
@@ -949,7 +985,7 @@ body {
 }
 
 .footer-section ul li a {
-  color: #bdc3c7;
+  color: white;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -985,7 +1021,7 @@ body {
   border-top: 1px solid #34495e;
   padding-top: 20px;
   text-align: center;
-  color: #95a5a6;
+  color: white;
   font-size: 0.85em;
 }
 
