@@ -226,4 +226,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         images.forEach(img => imageObserver.observe(img));
-      }
+      } 

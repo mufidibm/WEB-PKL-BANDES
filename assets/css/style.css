@@ -137,7 +137,6 @@ body {
   color: #000;
   cursor: pointer;
 }
-
  .custom-carousel {
         position: relative;
         width: 100%;
@@ -298,11 +297,84 @@ body {
         filter: brightness(1);
       }
 
+.carousel-next::after {
+  content: "❯";
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+/* Progress Bar */
+.carousel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  z-index: 10;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #84ae92, #5a827e);
+  width: 0%;
+  transition: width 0.1s linear;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Fade Animation */
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Loading Animation */
+.carousel-slide img {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease, transform 0.6s ease;
+}
+
+.carousel-slide.active img {
+  filter: brightness(1);
+}
 
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
-
   }
 
   #nav-links {
@@ -337,20 +409,33 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 150px 10px;
+  padding: 50px 40px 10px;
   box-sizing: border-box;
 }
 
 .kiri {
-  flex: 1;
-  max-width: 50%;
+  width: 50%;
+  padding-left: 100px;
+  /* border: 2px solid black; */
 }
 
 .kiri h1 {
-  font-size: 48px;
+  font-size: 300%;
   margin-bottom: 30px;
   color: #5a827e;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.545);
+}
+
+@media (max-width: 1020px){
+  .kiri h1 {
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 1590px) {
+  .kiri h1{
+    font-size: 56px;
+  }
 }
 
 .kiri .btn-beranda {
@@ -371,12 +456,13 @@ body {
 }
 
 .kanan {
+  /* border: 2px solid black; */
+  display: flex;
   position: relative;
   justify-content: center;
+  align-items: center;
   width: 50%;
-  margin-left: 50px;
-  left: 100px;
-
+  height: 50vh;
 }
 
 .kanan img {
@@ -389,10 +475,13 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 15px 5px;
+    flex-direction: column;
   }
 
   .kiri {
-    max-width: 100%;
+    width: 90%;
+    padding-left: 0px;
+    /* border: 2px solid black; */
     margin-bottom: 40px;
     text-align: center;
     margin-top: 50px;
@@ -417,22 +506,20 @@ body {
           max-width: 100%;
         }
 
-        .carousel-nav {
-          width: 40px;
-          height: 40px;
-          font-size: 14px;
-        }
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
 
-        .carousel-prev {
-          left: 10px;
-        }
+  .carousel-prev {
+    left: 10px;
+  }
 
-        .carousel-next {
-          right: 10px;
-        }
+  .carousel-next {
+    right: 10px;
+  }
 }
-
-
 
 .container {
   max-width: 1200px;
@@ -549,18 +636,25 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0px;
 }
 
 .card {
   background-color: #fff;
   border-radius: 8px;
   width: 260px;
+  margin-bottom: 30px;
   height: 470px;
   box-sizing: border-box;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   overflow: scroll;
+}
+
+@media (min-width: 1500px) {
+  .card {
+    width: 300px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -572,11 +666,9 @@ body {
   border-radius: 3px;
 }
 
-
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
-
 
 .card:hover {
   cursor: pointer;
@@ -683,12 +775,13 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 0px;
 }
 
 .galeri-container img {
   width: 350px;
   height: 250px;
+  margin-bottom: 30px;
   object-fit: cover;
   box-shadow: 6px 6px 2px rgb(115, 200, 191);
   border-radius: 5px;
@@ -701,6 +794,39 @@ body {
 .galeri-container img:hover {
   scale: 1.05;
   cursor: pointer;
+}
+@media (min-width: 1590px) {
+  .galeri-container img {
+    scale: 1.2;
+    position: relative;
+    top: 60px;
+  }
+  .galeri-container img:hover {
+    scale: 1.25;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1908px) {
+  .galeri-container img {
+    scale: 1.3;
+    position: relative;
+    top: 140px;
+  }
+  .galeri-container img:hover {
+    scale: 1.35;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 2520px) {
+  .galeri-container img {
+    scale: 1.65;
+  }
+  .galeri-container img:hover {
+    scale: 1.7;
+    cursor: pointer;
+  }
 }
 
 #client {
@@ -718,7 +844,7 @@ body {
 
 .client-isi {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px;
@@ -876,5 +1002,11 @@ body {
 
   .social-links {
     justify-content: center;
+  }
+}
+
+@media (min-width: 1590px){
+  h2 {
+    font-size: 2.5rem !important;
   }
 }
